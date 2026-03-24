@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-// 🟢 Error Fixed Here: Removed Twitter, Github, Linkedin. Added safe icons.
 import { 
   Hexagon, Mail, Globe, ShieldCheck, Zap, Download, Sparkles, 
   MessageCircle, Share2, ArrowRight, CheckCircle2, Heart 
@@ -24,6 +23,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      {/* 🟢 Monetag Verification Code Added Here */}
+      <head>
+        <meta name="monetag" content="5089fd8a142f6ec6dee395534bcf6164" />
+      </head>
+
       {/* 🟢 Light Purple Background matching your theme */}
       <body className={`${inter.className} bg-[#f4f0ff] text-slate-900 flex flex-col min-h-screen antialiased selection:bg-blue-600 selection:text-white`}>
         
